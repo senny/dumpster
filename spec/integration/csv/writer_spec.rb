@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'integration/spec_helper'
 
 describe Dumpster::CSV::Writer do
@@ -12,6 +13,10 @@ describe Dumpster::CSV::Writer do
 
     io.rewind
     io.readlines.should == ["col1-row1,col2-row1\n", "col1-row2,col2-row2\n"]
+  end
+
+  it '#write_to_string gibt die CSV-Daten als String zurück' do
+    subject.write_to_string.should == "col1-row1,col2-row1\ncol1-row2,col2-row2\n"
   end
 
   it '#write_to_file schreibt die CSV Daten in eine Datei' do

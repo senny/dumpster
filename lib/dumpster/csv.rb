@@ -8,17 +8,25 @@ module Dumpster
         @model = model
       end
 
+      def write_to(io)
+        csv = build_csv(io)
+        @model.each do |row|
+          csv << row
+        end
+      end
+
       def write_to_file(path)
         File.open(path, 'w+') do |file|
           write_to file
         end
       end
 
-      def write_to(io)
-        csv = build_csv(io)
-        @model.each do |row|
-          csv << row
-        end
+      def write_to_string
+        require 'stringio'
+        io = StringIO.new
+        write_to(io)
+        io.rewind
+        io.readlines.join
       end
 
       def build_csv(io)
