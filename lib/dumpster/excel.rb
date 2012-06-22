@@ -8,6 +8,12 @@ module Dumpster
         @model = model
       end
 
+      def write_to_string
+        file = Tempfile.new('dumpster_excel_export.xlsx')
+        write_to_file(file.path)
+        File.read(file.path)
+      end
+
       def write_to_file(path)
         package = Axlsx::Package.new
         workbook = package.workbook
