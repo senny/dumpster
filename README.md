@@ -2,8 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/garaio/dumpster)
 
-Abstraktion für den Export von Daten in Tabellenform. Momentan werden die Formate
-CSV und XLSX unterstützt.
+Abstraction layer to export tabular data. Currently dumpster supports XLSX and CSV exports.
 
 ## Installation
 
