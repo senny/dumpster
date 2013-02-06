@@ -8,7 +8,9 @@ Abstraction layer to export tabular data. Currently dumpster supports XLSX and C
 
 Add this line to your application's Gemfile:
 
-    gem 'dumpster'
+```ruby
+gem 'dumpster'
+```
 
 Or install it yourself as:
 
