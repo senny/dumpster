@@ -15,5 +15,5 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-spec/integration/csv/output/
-spec/integration/excel/output/
+spec/integration/csv/output/*.csv
+spec/integration/excel/output/*.xlsx
