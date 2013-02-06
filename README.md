@@ -1,7 +1,6 @@
 # Dumpster
 
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/garaio/dumpster)
-
 [![Build Status](https://travis-ci.org/senny/dumpster.png?branch=master)](https://travis-ci.org/senny/dumpster)
 
 Abstraction layer to export tabular data. Currently dumpster supports XLSX and CSV exports.
