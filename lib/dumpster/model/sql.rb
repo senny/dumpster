@@ -1,10 +1,10 @@
 module Dumpster
   module Model
-    class Sql
+    class ActiveRecordSql
 
-      def initialize(connection, sql)
-        @connection = connection
+      def initialize(sql, connection = ActiveRecord::Base.connection)
         @sql = sql
+        @connection = connection
       end
 
       def each(&block)

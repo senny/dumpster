@@ -30,6 +30,21 @@ writer = Dumpster.excel_writer(model)
 writer.write_to_file('/some/directory/some.file')
 ```
 
+### ActiveRecord
+
+Dumpster ships with a `Dumpster::Model::ActiveRecordSql`. This model
+allows you to execute arbitrary SQL through ActiveRecord to export the
+result.
+
+```ruby
+model = Dumpster::Model::ActiveRecordSql.new('SELECT * from users')
+
+writer = Dumpster.csv_writer(model) # for CSV output
+writer = Dumpster.excel_writer(model) # for Excel output
+
+writer.write_to_file('/some/directory/some.file')
+```
+
 ## Contributing
 
 1. Fork it
