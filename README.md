@@ -49,3 +49,5 @@ writer.write_to_file('/some/directory/some.file')
 
 Please read the [contribution guidelines](CONTRIBUTING.md) before
 submitting code.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/3c3b77c78cbf66e966eb68440c8a992d "githalytics.com")](http://githalytics.com/senny/dumpster)
