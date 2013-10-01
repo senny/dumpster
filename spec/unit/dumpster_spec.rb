@@ -3,7 +3,7 @@ require 'dumpster'
 
 describe Dumpster do
 
-  let(:model) { stub }
+  let(:model) { double }
 
   context 'CSV' do
     it '#csv_writer erstellt einen CSV-Writer für das Model' do
