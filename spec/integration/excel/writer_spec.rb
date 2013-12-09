@@ -21,4 +21,14 @@ describe Dumpster::Excel::Writer do
 
     File.exists?(output_path).should be_true
   end
+
+  it 'enable auto filtering on the table' do
+    output_path = File.join(File.dirname(__FILE__), 'output', 'auto_filter.xlsx')
+    FileUtils.rm_f(output_path)
+
+    subject.extend Dumpster::Excel::AutoFilter
+    subject.write_to_file(output_path)
+
+    File.exists?(output_path).should be_true
+  end
 end
